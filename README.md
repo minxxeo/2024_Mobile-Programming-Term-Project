@@ -6,5 +6,5 @@
 ### Demo Video
 https://drive.google.com/file/d/19CsQ5OdjtaEF5WYuVfdXIFncIOAqeTvg/view
 ### App proposlal & Final Presentation  
-App proposlal : https://drive.google.com/file/d/1WyEClxz_PNwFel43d1gOXrpzwk1x6ePk/view?usp=sharing  
+App proposlal : https://drive.google.com/file/d/1r2krACBsdqYNlotzU16WqF4GWMAKBXWR/view?usp=sharing  
 Final Presentation : https://drive.google.com/file/d/1SwAecoOoiyqorUdggS9qpjpwzFNx84xA/view?usp=sharing  
