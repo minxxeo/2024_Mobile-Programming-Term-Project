@@ -1,0 +1,302 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFDE59"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="오늘도 좋은 하루, OO님!"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/image_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="250dp"
+            android:gravity="center">
+
+            <android.widget.Button
+                android:id="@+id/btn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:text="카메라"
+                android:onClick="openCamera"
+                android:background="@drawable/rounded_corner" />
+
+            <android.widget.Button
+                android:id="@+id/btn_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:text="갤러리"
+                android:background="@drawable/rounded_corner" />
+
+            <android.widget.Button
+                android:id="@+id/btn_basic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="기본"
+                android:background="@drawable/rounded_corner" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/image_button_layout"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="이름"
+            android:textSize="17dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_name"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/birth_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="생년월일(년-월-일)"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="생년월일(년-월-일)" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_birth"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="휴대전화"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="휴대전화" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_emergency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_phone"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/emergency_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="긴급 연락처"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_emergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="긴급 연락처" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_emergency"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/height_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="키"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="키" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_height"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/weight_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="몸무게"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="몸무게" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_blood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_weight"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/blood_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="혈액형"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_blood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="혈액형" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_medical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/profile_blood"
+        android:background="@drawable/rounded_corner4" >
+
+        <TextView
+            android:id="@+id/medical_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:backgroundTintMode="src_over"
+            android:text="의료 정보"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edit_text_medical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="입력하세요" />
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_medical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:text="저장"
+        android:background="@drawable/rounded_corner"
+        android:onClick="saveProfileData"/>
+</RelativeLayout>

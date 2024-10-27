@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/habitEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="습관을 입력하세요." />
+
+    <RadioGroup
+        android:id="@+id/colorRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/colorOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pastel Pink"
+            android:tag="0" />
+
+        <RadioButton
+            android:id="@+id/colorOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pastel Blue"
+            android:tag="1" />
+
+        <RadioButton
+            android:id="@+id/colorOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pastel Green"
+            android:tag="2" />
+
+        <RadioButton
+            android:id="@+id/colorOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PeachPuff"
+            android:tag="3" />
+
+        <RadioButton
+            android:id="@+id/colorOption5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pastel Orange"
+            android:tag="4" />
+
+        <RadioButton
+            android:id="@+id/colorOption6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lavender"
+            android:tag="5" />
+
+        <RadioButton
+            android:id="@+id/colorOption7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khaki"
+            android:tag="6" />
+
+        <RadioButton
+            android:id="@+id/colorOption8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thistle"
+            android:tag="7" />
+
+        <RadioButton
+            android:id="@+id/colorOption9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomato"
+            android:tag="8" />
+
+        <RadioButton
+            android:id="@+id/colorOption10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LightSeaGreen"
+            android:tag="9" />
+    </RadioGroup>
+</LinearLayout>

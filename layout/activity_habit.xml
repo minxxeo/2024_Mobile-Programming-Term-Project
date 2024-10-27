@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFDE59"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--5월 27일 수정본-->
+    <!-- 현재 달 텍스트 -->
+    <TextView
+        android:id="@+id/textViewCurrentMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Current Month" />
+
+    <!-- 이전 달 버튼 -->
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="←"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/textViewCurrentMonth"
+        app:layout_constraintTop_toTopOf="@id/textViewCurrentMonth"
+        app:layout_constraintBottom_toBottomOf="@id/textViewCurrentMonth"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- 다음 달 버튼 -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="→"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/textViewCurrentMonth"
+        app:layout_constraintTop_toTopOf="@id/textViewCurrentMonth"
+        app:layout_constraintBottom_toBottomOf="@id/textViewCurrentMonth"
+        android:layout_marginStart="16dp"/>
+
+    <!-- 첫 번째 줄 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDaysRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewCurrentMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 일요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_1"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_1"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 월요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_2"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_2"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 화요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_3"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 수요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_4"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_4"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 목요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_5"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_5"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 금요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_6"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_6"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 토요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="토"
+                android:textColor="#0B04C5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day1_7"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay1_7"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 두 번째 줄 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDaysRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 일요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_1"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_1"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 월요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_2"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_2"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 화요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_3"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 수요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_4"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_4"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 목요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_5"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_5"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 금요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_6"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_6"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 토요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day2_7"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay2_7"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 세 번째 줄 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDaysRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 일요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_1"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_1"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 월요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_2"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_2"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 화요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_3"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 수요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_4"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_4"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 목요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_5"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_5"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 금요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_6"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_6"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 토요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day3_7"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay3_7"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 네 번째 줄 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDaysRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 일요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_1"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_1"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 월요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_2"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_2"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 화요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_3"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 수요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_4"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_4"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 목요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_5"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_5"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 금요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_6"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_6"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 토요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day4_7"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay4_7"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 다섯 번째 줄 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDaysRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 일요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_1"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_1"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 월요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_2"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_2"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 화요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_3"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 수요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_4"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_4"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 목요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_5"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_5"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 금요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_6"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_6"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 토요일 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/day5_7"
+                android:layout_width="44dp"
+                android:layout_height="55dp"
+                android:gravity="start|top"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@android:color/black"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:id="@+id/lineContainerDay5_7"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 습관 추가하기 버튼 -->
+
+    <Button
+        android:id="@+id/addHabitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#D5C4EA"
+        android:text="습관 추가하기"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow5" />
+
+    <Button
+        android:id="@+id/loadRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#F2CB61"
+        android:text="알람 설정하기"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/addHabitButton"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDaysRow5" />
+
+    <LinearLayout
+        android:id="@+id/newLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner4"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addHabitButton">
+
+    <!-- 여기에 필요한 UI 요소를 추가하세요 -->
+    <TextView
+        android:id="@+id/newtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한 줄 일기"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+</LinearLayout>
+
+
+    <!-- 습관 박스를 추가할 ScrollView -->
+    <ScrollView
+        android:id="@+id/scrollViewHabits"
+        android:layout_width="416dp"
+        android:layout_height="190dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addHabitButton"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/habitContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

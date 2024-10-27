@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFDE59"
+    tools:context=".NotificationActivity">
+
+    <TextView
+        android:id="@+id/selectedTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="00:00 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="45sp" />
+
+    <EditText
+        android:id="@+id/labelEditText"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="70dp"
+        android:hint="알람 이름 |"
+        android:textSize="26sp"/>
+
+    <android.widget.Button
+        android:id="@+id/selectTimeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="70dp"
+        android:background="@drawable/rounded_corner4"
+        android:text="시간 설정"
+        android:textSize="26sp"/>
+
+    <android.widget.Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="70dp"
+        android:background="@drawable/rounded_corner4"
+        android:text="저장하기"
+        android:textSize="26sp"/>
+
+    <android.widget.Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner4"
+        android:layout_marginHorizontal="70dp"
+        android:text="취소하기"
+        android:textSize="26sp"/>
+
+</LinearLayout>

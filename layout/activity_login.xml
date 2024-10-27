@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFDE59"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".LoginActivity" >
+
+    <LinearLayout
+        android:id="@+id/app_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="건강을 위한 쉽고 간편한 습관,"
+            android:textSize="20dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:src="@drawable/title" >
+
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFAFA"
+            android:hint="아이디"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#8C8C8C"
+            android:backgroundTintMode="src_over"
+            android:background="@drawable/rounded_corner" />
+
+        <EditText
+            android:id="@+id/login_pw"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFAFA"
+            android:hint="비밀번호"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#8C8C8C"
+            android:backgroundTintMode="src_over"
+            android:background="@drawable/rounded_corner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <CheckBox
+            android:id="@+id/login_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="아이디 저장하기"
+            android:layout_marginEnd="10dp" />
+
+        <android.widget.Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="serif"
+            android:text="로그인"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginStart="20dp" >
+        </android.widget.Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <android.widget.Button
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="#FFDE59"
+            android:text="가입하기"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <android.widget.Button
+            android:id="@+id/login_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="#FFDE59"
+            android:text="비밀번호 찾기"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

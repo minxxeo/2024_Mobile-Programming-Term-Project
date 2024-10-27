@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgd_yellow"
+    android:orientation="vertical"
+    tools:context=".dailyCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:text="00."
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginTop="14dp"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/introMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:text="00님! 오늘 하루는 어떠셨나요?"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/introMessage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="오늘 하루를 입력해보세요!🙌"
+                android:textSize="23sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우 그렇다 | 그렇다 | 아니다 | 매우 아니다"
+                android:textAlignment="center">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:background="#20000000"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <FrameLayout
+        android:id="@+id/surveyScroll"
+        android:layout_marginLeft="11dp"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_menu"
+        android:backgroundTint="#70FFFFFF"
+        android:paddingTop="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Survey Question -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. 하고 있는 일에 잘 집중할 수 있었나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied1"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied1"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied1"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied1"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <!-- Survey Question -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. 걱정 때문에 잠을 잘 못자진 않았나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied2"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied2"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied2"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied2"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="3. 자신이 여러 면에서 쓸모 있는 역할을 \n    잘 하고있다고 느꼈나요?"
+                    android:textColor="#95000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied3"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied3"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied3"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied3"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. 대부분의 선택을 올바르게 \n     잘 할 수 있었나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied4"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied4"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied4"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied4"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. 계속해서 긴장감을 자주 느꼈나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied5"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied5"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied5"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied5"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6. 어려움을 극복할 수 없다는 생각에 \n    지배된 적 있나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied6"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied6"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied6"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied6"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7. 일상적 활동을 즐겁게 하였나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied7"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied7"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied7"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied7"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8. 문제가 생기면 그것을 피하지 않고 \n    맞서서 해결하려 하였나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied8"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied8"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied8"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied8"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9. 우울감과 불행감에 지배된 적 있나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied9"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied9"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied9"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied9"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. 자신감이 없어졌다고 느낀 적이 많나요?"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied10"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied10"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied10"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied10"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11. 일상적인 약속을 잘 지켰나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied11"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied11"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied11"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied11"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12. 인생이 절망적이란 생각에 \n       지배된 적이 있나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied12"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied12"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied12"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied12"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13. 신경이 쓰여서 힘들게 느껴진 일이 \n       많았나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied13"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied13"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied13"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied13"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14. 전반적으로 잠을 잘 주무셨나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied14"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied14"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied14"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied14"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15. 어떤 일을 할 때 대부분의 다른 사람들이 \n      하는 만큼 그 일을 처리할 수 있었나요?"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied15"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied15"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied15"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied15"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16. 당신과 가까운 사람들에게 \n      따뜻함과 애정을 느낄 수 있었나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied16"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied16"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied16"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied16"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17. 자신의 미래를 희망적으로 느꼈나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied17"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied17"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied17"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied17"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18. 부지런히 생활하며,\n      일에 전념할 수 있었나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied18"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied18"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied18"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied18"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19. 다른 사람들과 잘 지내는 것이 \n       힘들지않게 느껴졌나요?"
+                    android:textSize="18sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied19"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied19"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied19"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied19"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20. 전반적으로 자신이 일을 \n       잘 수행했다고 느꼈습니까?"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#95000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/satisfactionGroup20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/veryDissatisfied20"
+                        android:layout_marginLeft="40dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="0" />
+
+                    <RadioButton
+                        android:id="@+id/dissatisfied20"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="1" />
+
+                    <RadioButton
+                        android:id="@+id/satisfied20"
+                        android:layout_marginLeft="18dp"
+                        style="@style/CustomRadioButtonMid"
+                        android:tag="3" />
+
+                    <RadioButton
+                        android:id="@+id/verySatisfied20"
+                        android:layout_marginLeft="15dp"
+                        style="@style/CustomRadioButtonVery"
+                        android:tag="4" />
+                </RadioGroup>
+
+                <android.widget.Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="210dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom='10dp'
+                    android:text="Save"
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/rounded_corner4"
+                    android:backgroundTint="#90FFFFFF"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/CustomProgressBar"
+        android:layout_width="320dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="100dp"/>
+</LinearLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFDE59"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".RegisterActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디:"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <EditText
+                android:id="@+id/register_id"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="아이디 입력 (이메일 형식)"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_id"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_id"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/register_pw"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="비밀번호 입력 (6~20자)"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_pw"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_pw"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 재확인:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/register_repw"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="비밀번호 재입력"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_repw"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_repw"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/register_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="이름을 입력해주세요"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_name"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생년월일:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/register_birth"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:hint="년도-월-일"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_birth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_birth"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="휴대전화:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="휴대폰 번호 입력 ('-'제외 11자리)"
+                android:backgroundTint="#FFFAFA"
+                android:inputType="textCapWords"
+                android:textColorHint="#8C8C8C"
+                android:padding="10dp"
+                android:textColor="#845232"
+                android:backgroundTintMode="src_over"
+                android:background="@drawable/rounded_corner" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_confirm"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/register_phone"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@null"-->
+<!--                android:src="@drawable/check"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:contentDescription="Confirm Button" />-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <android.widget.Button
+            android:id="@+id/register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner2"
+            android:fontFamily="serif"
+            android:text="가입하기"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <android.widget.Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/rounded_corner3"
+            android:fontFamily="serif"
+            android:text="가입취소"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
